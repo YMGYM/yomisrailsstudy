@@ -3,3 +3,9 @@
 </h1>
 
 <a href="/posts/new">새로쓰기</a>
+
+<ul>
+  <% @post.each do |p| %>
+    <list>글번호 : <%= p.id %> // <a href="/posts/show/<%= p.id %>"><%= p.title %></a><br /></list>
+  <% end %>
+</ul>
