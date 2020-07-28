@@ -6,3 +6,9 @@
 <p><%= @post.title %></p>
 <h3>내용</h3>
 <p><%= @post.content %></p>
+
+<a href="/posts/<%= @post.id %>/edit">수정하기</a>
+
+<form action="/posts/<%= @post.id %>/update" method="POST">
+  <input type=submit value="삭제">
+</form>

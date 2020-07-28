@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :menus
   # root 'posts#index'
   # # get '/' => 'hello#index'
   # get '/hello/index'
@@ -8,11 +9,20 @@ Rails.application.routes.draw do
   #
   # get '/hello/skip' => 'hello#skip'
 
-  get '/posts' => 'posts#index'
-
-  get '/posts/new' => 'posts#new'
-
-  post '/posts/create' => 'posts#create'
-
-  get '/posts/show/:id' => 'posts#show'
+  # get '/posts' => 'posts#index'
+  #
+  # get '/posts/new' => 'posts#new'
+  #
+  # # post '/posts/create' => 'posts#create'
+  # post '/posts' => 'posts#create'
+  #
+  # get '/posts/:id' => 'posts#show'
+  #
+  # get '/posts/:id/edit' => 'posts#edit'
+  #
+  # post '/posts/:id/update' => 'posts#update'
+  #
+  # post '/posts/:id/destroy' => 'posts#destroy'
+  #
+  resources :posts
 end

@@ -6,6 +6,6 @@
 
 <ul>
   <% @post.each do |p| %>
-    <list>글번호 : <%= p.id %> // <a href="/posts/show/<%= p.id %>"><%= p.title %></a><br /></list>
+    <list>글번호 : <%= p.id %> // <a href="/posts/<%= p.id %>"><%= p.title %></a><br /></list>
   <% end %>
 </ul>
