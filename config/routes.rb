@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :menus
+  resources :article
   # root 'posts#index'
   # # get '/' => 'hello#index'
   # get '/hello/index'

@@ -1,0 +1,20 @@
+<h1>Article#new</h1>
+<p>Find me in app/views/article/new.html.erb</p>
+
+<% if @article.errors.any? %>
+  <h2>
+    <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
+  </h2>
+  <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
+<%= form_with scope: :article, url: article_index_path, local: true do |form| %>
+  <%= form.text_field :title %> <br/>
+
+  <%= form.text_area :content %><br/>
+
+  <%= form.submit %>
+<% end %>
+
+<%= link_to 'Back', _back_url %>

@@ -1,0 +1,19 @@
+<h1>Article#index</h1>
+<p>Find me in app/views/article/index.html.erb</p>
+
+<%= link_to '새 글 쓰기', new_article_path %>
+<br/ >
+<table>
+  <tr>
+    <th>title</th>
+    <th>content</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.content %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
