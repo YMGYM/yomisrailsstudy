@@ -1,0 +1,18 @@
+<h1>Test#new</h1>
+<p>Find me in app/views/test/new.html.erb</p>
+
+
+<%= form_with scope: :test, url: test_index_path do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
