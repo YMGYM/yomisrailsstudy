@@ -12,3 +12,5 @@
 </p>
 
 <%= link_to "뒤로가기", test_index_path %>
+<%= link_to "수정하기", edit_test_path(@test) %>
+<%= link_to "삭제하기", test_path(@test), method: :delete , data: {confirm: "ㄹㅇ?"}%>

@@ -1,2 +1,18 @@
-<h1>Test#edit</h1>
-<p>Find me in app/views/test/edit.html.erb</p>
+<h1>Test#update</h1>
+<p>Find me in app/views/test/update.html.erb</p>
+
+
+<%= form_with model: @test do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
