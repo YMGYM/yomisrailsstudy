@@ -1,4 +1,6 @@
 class TestController < ApplicationController
+  before_action :authenticate_user!, except: :index
+
   def index
     @test = Test.all
   end
@@ -14,6 +16,7 @@ class TestController < ApplicationController
 
   def show
     @test = Test.find(params[:id])
+
   end
 
   def edit
